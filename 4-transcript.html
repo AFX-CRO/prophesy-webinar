@@ -57,6 +57,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
   <!--=====  / Fonts ====-->
   <style>
+    html { font-size: 100%; }
     body { font-family: 'Raleway', sans-serif; }
 
     h1 { font-family: 'Raleway', sans-serif; font-size: 50px; font-weight: 700; color: #004a8b; text-align: center; }
@@ -78,26 +79,28 @@
     h4 { font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 400; color: #7b99b3; margin-bottom: 25px; }
     p {
       font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
-      font-size: 1.4em;
+      font-size: 1.25rem;
+      line-height: 1.45;
+      margin: .9375em 1.25em;
       color: #2E2E2E;
-      margin: .9375em 2.8em;
+    }
+    @media screen and (max-width: 695px){
+      p {
+          font-size: 1.125rem;
+      }
     }
     
     header { border-bottom: 10px solid #02468f; background-color: #060c24; text-align: center; }
     header img { margin: 0px auto; }
-    header p { font-family: 'Raleway', sans-serif; font-size: 32px; letter-spacing: -1.5px; margin: 0; color: lightblue; border-bottom: 1px solid lightblue; }
+    header p { font-family: 'Raleway', sans-serif; font-size: 1.5em; letter-spacing: -.5px; margin: 0; color: lightblue; }
     header p span { color: #f8e71c; }
     @media (max-width: 768px) { header p { font-size: 22px; } }
-    @media (max-width: 460px) { header p { font-size: 16px; } }
+    @media (max-width: 460px) { header p { font-size: 14px; } }
     
     .hosts {
-      font-size: 22.5px;
       font-weight: bold;
     }
-    .content { width: 900px; max-width: 90%; margin: 0px auto; }
-    @media (max-width: 460px) { .content { max-width: 100%;} }
-
-    @media (min-width: 1968px) { .fullwidth { width: 100%; } }
+    .content { max-width: 900px; margin: 0px auto; }
 
     .video { max-width: 75%; margin: 20px auto; border: 5px solid #004a8b; position: relative; }
 
