@@ -1,0 +1,569 @@
+<!-- Inliner Build Version 4380b7741bb759d6cb997545f3add21ad48f010b --><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width" /><script type="text/javascript">
+ function capitalizeMe(obj) {
+   val = obj.value;
+   newVal = '';
+   val = val.split(' ');
+   for(var c=0; c < val.length; c++) {
+     newVal += val[c].substring(0,1).toUpperCase() + val[c].substring(1,val[c].length) + ' ';
+   }
+   obj.value = newVal;
+ }
+ function webform_validate() {
+     var msg = '';
+     if (document.getElementById('Phone').value.replace(/[^0-9]/, '').length < 10) {
+         msg += "The phone field is required. Please enter all 10 digits, including the area code.\n";
+     }
+
+     if (msg) {
+         alert(msg);
+         return false;
+     }
+     return true;
+ }
+</script>
+<title>You're Registered for My Live Event!</title>
+<style type="text/css">#CallLoop { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 4px; }
+ #CallLoop td, #CallLoop th { padding: 5px 8px; }
+ #CallLoop th { text-align: left; font-weight: normal; font-size: 13px; }
+ #CallLoop .callloop-bottom { margin: 20px 10px 10px 10px; font-size: 10px; text-align:center; color: #666;}
+ #CallLoop a { color: #3891c1 ; }
+ #CallLoop a:link { color: #3891c1 ; text-decoration: none; }
+ #CallLoop a:hover { text-decoration: underline; }
+ #CallLoop .callloop-text { margin: 10px 0 5px 0; }
+ #CallLoop input[type=text] { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; padding: 4px 2px; font-size: 13px; border: 1px solid #bbbbbb ; background: #FFF url(https://s3.amazonaws.com/callloop/images/fieldbg.gif (111b)
+
+) repeat-x scroll top; width: 100%;  }
+ #CallLoop input[type=text]:focus { border: 1px solid #F60; color: #222; outline: none; border-color: #91bee6 ; -webkit-box-shadow: 0 0 5px rgba(0, 136, 255, 0.4) -moz-box-shadow: 0 0 5px rgba(0, 136, 255, 0.4); box-shadow: 0 0 5px rgba(0, 136, 255, 0.4); }
+ #CallLoop .callloop-submit { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; background: #F60 url(https://s3.amazonaws.com/callloop/images/orange.jpg (585b)
+
+) no-repeat; padding: 4px 12px; border: 1px solid #ae3700 ; font-weight: bold; cursor: pointer; color: #FFFFFF ; font-size: 12px; margin-right: 10px; text-decoration: none; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+
+a:hover {
+color: #5E8BC6 !important;
+}
+a:active {
+color: #5E8BC6 !important;
+}
+a:visited {
+color: #5E8BC6 !important;
+}
+h1 a:active {
+color: #5E8BC6 !important;
+}
+h2 a:active {
+color: #5E8BC6 !important;
+}
+h3 a:active {
+color: #5E8BC6 !important;
+}
+h4 a:active {
+color: #5E8BC6 !important;
+}
+h5 a:active {
+color: #5E8BC6 !important;
+}
+h6 a:active {
+color: #5E8BC6 !important;
+}
+h1 a:visited {
+color: #5E8BC6 !important;
+}
+h2 a:visited {
+color: #5E8BC6 !important;
+}
+h3 a:visited {
+color: #5E8BC6 !important;
+}
+h4 a:visited {
+color: #5E8BC6 !important;
+}
+h5 a:visited {
+color: #5E8BC6 !important;
+}
+h6 a:visited {
+color: #5E8BC6 !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.button:visited td {
+background: #2795b6 !important;
+}
+table.button:active td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #fff !important;
+}
+table.button:visited td a {
+color: #fff !important;
+}
+table.button:active td a {
+color: #fff !important;
+}
+table.button:hover td {
+background: #2795b6 !important;
+}
+table.tiny-button:hover td {
+background: #2795b6 !important;
+}
+table.small-button:hover td {
+background: #2795b6 !important;
+}
+table.medium-button:hover td {
+background: #2795b6 !important;
+}
+table.large-button:hover td {
+background: #2795b6 !important;
+}
+table.button:hover td a {
+color: #ffffff !important;
+}
+table.button:active td a {
+color: #ffffff !important;
+}
+table.button td a:visited {
+color: #ffffff !important;
+}
+table.tiny-button:hover td a {
+color: #ffffff !important;
+}
+table.tiny-button:active td a {
+color: #ffffff !important;
+}
+table.tiny-button td a:visited {
+color: #ffffff !important;
+}
+table.small-button:hover td a {
+color: #ffffff !important;
+}
+table.small-button:active td a {
+color: #ffffff !important;
+}
+table.small-button td a:visited {
+color: #ffffff !important;
+}
+table.medium-button:hover td a {
+color: #ffffff !important;
+}
+table.medium-button:active td a {
+color: #ffffff !important;
+}
+table.medium-button td a:visited {
+color: #ffffff !important;
+}
+table.large-button:hover td a {
+color: #ffffff !important;
+}
+table.large-button:active td a {
+color: #ffffff !important;
+}
+table.large-button td a:visited {
+color: #ffffff !important;
+}
+table.secondary:hover td {
+background: #d0d0d0 !important; color: #555;
+}
+table.secondary:hover td a {
+color: #555 !important;
+}
+table.secondary td a:visited {
+color: #555 !important;
+}
+table.secondary:active td a {
+color: #555 !important;
+}
+table.success:hover td {
+background: #187215 !important;
+}
+table.alert:hover td {
+background: #970b0e !important;
+}
+table.customer-info tr td a.button:hover {
+background: #187215; color: #ffffff !important;
+}
+table.dr-btns:hover td {
+background: #970b0e !important;
+}
+table.dr-btns a:hover {
+color: #FFFFFF !important;
+}
+table.dr-btns a:active {
+color: #FFFFFF !important;
+}
+table.dr-btns a:visited {
+color: #FFFFFF !important;
+}
+@media only screen and (max-width: 360px) {
+  .pullquote {
+    width: 100% !important;
+  }
+  h1 {
+    font-size: 30px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  table[class="body"] img {
+    width: auto !important; height: auto !important;
+  }
+  table[class="body"] center {
+    min-width: 0 !important;
+  }
+  table[class="body"] .container {
+    width: 95% !important;
+  }
+  table[class="body"] .rowz {
+    width: 100% !important; display: block !important;
+  }
+  table[class="body"] .wrapper {
+    display: block !important; padding-right: 0 !important;
+  }
+  table[class="body"] .columns {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class="body"] .column {
+    table-layout: fixed !important; float: none !important; width: 100% !important; padding-right: 0px !important; padding-left: 0px !important; display: block !important;
+  }
+  table[class="body"] .wrapper.first .columns {
+    display: table !important;
+  }
+  table[class="body"] .wrapper.first .column {
+    display: table !important;
+  }
+  table[class="body"] table.columns td {
+    width: 100% !important;
+  }
+  table[class="body"] table.column td {
+    width: 100% !important;
+  }
+  table[class="body"] .columns td.one {
+    width: 8.333333% !important;
+  }
+  table[class="body"] .column td.one {
+    width: 8.333333% !important;
+  }
+  table[class="body"] .columns td.two {
+    width: 16.666666% !important;
+  }
+  table[class="body"] .column td.two {
+    width: 16.666666% !important;
+  }
+  table[class="body"] .columns td.three {
+    width: 25% !important;
+  }
+  table[class="body"] .column td.three {
+    width: 25% !important;
+  }
+  table[class="body"] .columns td.four {
+    width: 33.333333% !important;
+  }
+  table[class="body"] .column td.four {
+    width: 33.333333% !important;
+  }
+  table[class="body"] .columns td.five {
+    width: 41.666666% !important;
+  }
+  table[class="body"] .column td.five {
+    width: 41.666666% !important;
+  }
+  table[class="body"] .columns td.six {
+    width: 50% !important;
+  }
+  table[class="body"] .column td.six {
+    width: 50% !important;
+  }
+  table[class="body"] .columns td.seven {
+    width: 58.333333% !important;
+  }
+  table[class="body"] .column td.seven {
+    width: 58.333333% !important;
+  }
+  table[class="body"] .columns td.eight {
+    width: 66.666666% !important;
+  }
+  table[class="body"] .column td.eight {
+    width: 66.666666% !important;
+  }
+  table[class="body"] .columns td.nine {
+    width: 75% !important;
+  }
+  table[class="body"] .column td.nine {
+    width: 75% !important;
+  }
+  table[class="body"] .columns td.ten {
+    width: 83.333333% !important;
+  }
+  table[class="body"] .column td.ten {
+    width: 83.333333% !important;
+  }
+  table[class="body"] .columns td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class="body"] .column td.eleven {
+    width: 91.666666% !important;
+  }
+  table[class="body"] .columns td.twelve {
+    width: 100% !important;
+  }
+  table[class="body"] .column td.twelve {
+    width: 100% !important;
+  }
+  table[class="body"] td.offset-by-one {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-two {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-three {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-four {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-five {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-six {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-seven {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-eight {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-nine {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-ten {
+    padding-left: 0 !important;
+  }
+  table[class="body"] td.offset-by-eleven {
+    padding-left: 0 !important;
+  }
+  table[class="body"] table.columns td.expander {
+    width: 1px !important;
+  }
+  table[class="body"] .right-text-pad {
+    padding-left: 10px !important;
+  }
+  table[class="body"] .text-pad-right {
+    padding-left: 10px !important;
+  }
+  table[class="body"] .left-text-pad {
+    padding-right: 10px !important;
+  }
+  table[class="body"] .text-pad-left {
+    padding-right: 10px !important;
+  }
+  table[class="body"] .hide-for-small {
+    display: none !important;
+  }
+  table[class="body"] .show-for-desktop {
+    display: none !important;
+  }
+  table[class="body"] .show-for-small {
+    display: inherit !important;
+  }
+  table[class="body"] .hide-for-desktop {
+    display: inherit !important;
+  }
+  table[class="body"] td {
+    word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border-collapse: collapse !important;
+  }
+  table.sub-info tr td.left {
+    width: 15% !important;
+  }
+  table[class="body"] table.columns table.customer-info tr td {
+    width: 33.33333% !important;
+  }
+  table[class="body"] table.columns table.customer-info tr td.descript {
+    width: 0% !important; display: none;
+  }
+  table[class="body"] table.columns table.customer-info tr td.name {
+    border-right: 1px solid #e1e1e1;
+  }
+}
+.greybox{border: medium solid #ccc;
+margin:1%;
+padding 2%;
+}
+</style>
+<table bgcolor="#CCCCCC" class="body" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; height: 100%; width: 100%; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; background: #CCCCCC; margin: 0; padding: 0;">
+	<tbody>
+		<tr align="left" style="vertical-align: top; text-align: left; padding: 0;">
+			<td align="center" class="center" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: center; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 0;" valign="top">
+			<center style="width: 100%; min-width: 580px;"><span class="hiddenlead" style="color: #CCCCCC; font-family: Helvetica Neue, Helvetica, sans; font-size: 8px; text-align: center; visibility: hidden;">Thanks again for reserving your spot for my live training event&hellip;</span> <!-- Email Content -->
+			<table bgcolor="#ffffff" class="container af-main-wrapper" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: inherit; width: 580px; background: #ffffff; margin: 0 auto; padding: 0; border: 1px solid #cccccc;">
+				<tbody>
+					<tr align="left" style="vertical-align: top; text-align: left; padding: 0;">
+						<td align="left" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 0;" valign="top"><!--Masthead-->
+						<table class="rowz masthead" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; padding: 0px;">
+							<tbody>
+								<tr align="left" style="vertical-align: top; text-align: left; padding: 0;">
+									<td align="left" class="last wrapper no-padding" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 0;" valign="top">
+									<table class="full-width" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; padding: 0;">
+										<tbody>
+											<tr align="left" style="vertical-align: top; text-align: left; padding: 0;">
+												<td align="left" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222;
+                        font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 0;" valign="top"><img align="left" alt="TOM Header" class="masthead-image"
+                        height="172" src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/OptInPage/RIT_ProjectProphesy_Header-Confirm_002.jpg" style="outline: none; text-decoration: none;
+                         -ms-interpolation-mode: bicubic; width: 101%; max-width: 101%; float: left; clear: both; display: block;" width="582px" /></td>
+												<td align="left" class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left;
+                        visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 0;" valign="top">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--END Masthead--><!--Date & Main Links--><!--Lead--><!--END Lead--><!--Main Content-->
+
+						<table class="rowz" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; padding: 0px;">
+							<tbody>
+								<tr align="left" style="vertical-align: top; text-align: left; padding: 0;">
+									<td align="left" class="last wrapper" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 20px 0px 0px;" valign="top">
+									<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+										<tbody>
+											<tr align="left" style="vertical-align: top; text-align: left; padding: 0;">
+												<td align="left" class="text-pad" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 0px 20px 10px;" valign="top">
+												<p class="headline" style="font-size: 30px; line-height: 36px; font-family: 'Helvetica', 'Arial', sans-serif; padding-top: 10px; color: #333333; font-weight: bold; margin: 0 0 24px;">Congratulations!
+
+</p>
+
+	<p>											Hi, my name is James Altucher… </p>
+
+<p>I want to say congratulations on taking the first step in learning my “1,000% backdoor” strategy. </p>
+
+<p>Please mark your calendar for June 8th at 1 p.m. EST, where I’ll reveal how I turned a $2,000 investment into more than $10,000,000 in just nine months, and how you could also make exceptional profits. </p>
+
+<p>Now, in a moment I’m going to ask you to do a favor for me. </p>
+
+<p>Don’t worry, it’s easy... </p>
+
+<p>And doing me this favor will give you a huge jump start on everyone else looking to acquire wealth. </p>
+
+<p>But before we get to that favor, I’d like to tell you a little bit about who I am… </p>
+
+<p>About ten years ago, I found myself in kind of a difficult situation…</p>
+
+<p>I was going through a divorce… raising a young daughter… and I needed more money to get by.</p>
+
+<p>I had about $2,000 – and I was looking for a way to basically just multiply that money as quickly and safely as possible.</p>
+
+<p style="text-align:center; font-weight:bold;">This backdoor allowed me to “sneak into” some of America’s fastest growing companies and profit from their breakthrough ideas.</p>
+
+<p>So I took my $2,000… made a single investment from my home computer… and walked away with a profit of $10 million in nine months.</p>
+
+<p>Since then I’ve lived life on my own terms. I work when I want. Where I want. And with whom I want. </p>
+
+<p>I’ve been hired to run a $33 million hedge fund…</p>
+
+<p>A $125 million venture capital firm…</p>
+
+<p>I’ve sat on the board of a $600 million company…</p>
+
+<p>Written for The Wall Street Journal… the Financial Times… Yahoo Finance… and appeared on CNBC, MSNBC and Fox. </p>
+
+<p>And today I’m doing something I’ve never done before…</p>
+
+<p>Something that most people would consider completely insane… </p>
+
+<p>When you join me for this live webinar to learn my 1,000% backdoor strategy on June 8th at 1 p.m. EST… </p>
+
+<p>I guarantee that you will see how to make 1,000% returns on your money before the end of 2017.</p>
+
+<p>Now back to that favor I’m asking you… </p>
+
+<p>I want you to imagine what you’d do with 1,000% returns. </p>
+
+<p>For simplicity’s sake, let’s say you turn $10,000 into $100,000… </p>
+
+<p>What would you do with an extra $100,000? </p>
+
+<p>Would you write a book about your passions and try to become a #1 best-selling author, like I have? </p>
+
+<p>Would you buy a fancy new car? It’s not my thing, but hey… this is your money we’re talking about. </p>
+
+<p>Would you live in Airbnbs, like I do, all around the world? </p>
+
+<p>Whatever it is… </p>
+
+<p>I want you to tell me. The more details, the better. And don’t worry, there’s no right answer. </p>
+
+<p>Simply click the button below and fill out the submission box. </p>
+
+<p>Or, if you have a camera on your computer, click the button below and send me a video</p>
+
+<center>
+  <a href="https://pro.chooseyourselffinancial.com/p/Content/LoadContentById/181848/False?domainConfigurationId=104011&page=1" target="_blank">
+<img src="https://d13p2xj50zkyqm.cloudfront.net/promos_2/AF/TOM/LiveEvent_0517/SubmitVideo.png" alt="button" style="margin:auto:" width="200" height="53">
+</a>
+</center>
+<p>Then watch your email box. Each day leading up to our live webinar I’ll show you how to use this strategy… I’ll show you proof that it works… and I’ll give you the details behind this world-first “1,000% guarantee.” </p>
+
+<p>The emails will come from the 1,000% Backdoor Webinar. And they’ll arrive each day around 10 a.m. Eastern… </p>
+
+<p>All leading up to our event on June 8th date at 1 p.m. Eastern. </p>
+
+So mark your calendar. Cancel your appointments. You won’t want to miss this life-changing event.
+
+<p>So mark your calendar. Cancel your appointments. You won’t want to miss this life-changing event.</p>
+
+<p>Talk soon,</p>
+
+<p>James</p>
+
+<p>P.S. Each day leading up to the event I'll be sharing more and more about this breakthrough strategy...</p>
+
+<p>I'll tell you more about who I am... why you should listen to me... and how to potentially see huge gains in the coming months.</p>
+
+<p>I'll send you an email each day as we go along.</p>
+
+<p>And I'll be archiving everything at a special web page I just created called:</p>
+
+<a href="https://sites.agorafinancial.com/TOM/BackdoorEvent/index.html" target="_blank">
+<p>OneThousandPercentBackdoorEvent.com</p>
+</a>
+<p>Bookmark it! Come back everyday and you'll find new and exciting news.</p>
+
+
+												</td>
+												<td align="left" class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 0;" valign="top">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--END Main Content--><!--Footer Links--><!--END Footer Links--><!--Footer-->
+
+						<table bgcolor="#0f4767" class="rowz" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 100%; position: relative; padding: 0px;">
+							<tbody>
+								<tr align="left" style="vertical-align: top; text-align: left; padding: 0;">
+									<td align="left" class="wrapper last" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; position: relative; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 20px 0px 0px;" valign="top">
+									<table class="twelve columns" style="border-spacing: 0; border-collapse: collapse; vertical-align: top; text-align: left; width: 580px; margin: 0 auto; padding: 0;">
+										<tbody>
+											<tr align="left" style="vertical-align: top; text-align: left; padding: 0;">
+												<td align="left" class="text-pad footer" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; color: #6c8496; font-family: Arial, Helvetica, sans-serif; font-weight: normal; line-height: 1.6; font-size: 12px; border-top-color: #2d85b8; border-top-width: 1px; border-top-style: solid; mso-line-height-rule: exactly; margin: 0; padding: 24px 20px;" valign="top"><img align="left" alt="Agora Financial" height="56" src="https://sites.agorafinancial.com/EMAILS/images/af-email-footer-logo.png" style="outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: auto; max-width: 100%; float: left; clear: both; display: block;" title="Agora Financial" width="56" /> Please note: We sent this e-mail to you because you are subscribed to this service. To cancel by mail or for any other subscription issues, write us at: Customer Service | 808 St Paul St | Baltimore, MD 21202 USA. Nothing in this e-mail should be considered personalized investment advice. Although our employees may answer your general customer service questions, they are not licensed under securities laws to address your particular investment situation. No communication by our employees to you should be deemed as personalized investment advice. We expressly forbid our writers from having a financial interest in any security recommended to our readers. All of our employees and agents must wait 24 hours after on-line publication or 72 hours after the mailing of printed-only publication prior to following an initial recommendation. Any investments recommended in this letter should be made only after consulting with your investment advisor and only after reviewing the prospectus or financial statements of the company.<br />
+												<br />
+												&copy; 2016 Agora Financial, LLC. All Rights Reserved. Protected by copyright laws of the United States and international treaties. This Newsletter may only be used pursuant to the subscription agreement and any reproduction, copying, or redistribution (electronic or otherwise, including on the world wide web) , in whole or in part, is strictly prohibited without the express written permission of Agora Financial, LLC. 808 Saint Paul Street, Baltimore MD 21202.</td>
+												<td align="left" class="expander" style="word-break: keep-all; -webkit-hyphens: none; -moz-hyphens: none; hyphens: none; border-collapse: collapse !important; vertical-align: top; text-align: left; visibility: hidden; width: 0px; color: #222222; font-family: 'Helvetica', 'Arial', sans-serif; font-weight: normal; line-height: 24px; font-size: 16px; margin: 0; padding: 0;" valign="top">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--END Footer--></td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- END Email Content --></center>
+			</td>
+		</tr>
+	</tbody>
+</table>
