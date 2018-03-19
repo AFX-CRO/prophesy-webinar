@@ -70,9 +70,11 @@
 
     h4 { font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 400; color: #7b99b3; margin-bottom: 25px; }
     p { font-family: 'Raleway', sans-serif; font-size: 18px; color: #004a8b; }
-    
-    header { border-bottom: 10px solid #02468f; background-color: #060c24; }
+        
+    header { border-bottom: 10px solid #02468f; background-color: #060c24; text-align: center; }
     header img { margin: 0px auto; }
+    header p { font-family: 'Raleway', sans-serif; font-size: 32px; letter-spacing: -1.5px; margin: 0; color: lightblue; border-bottom: 1px solid lightblue; }
+    header p span { color: #f8e71c; }
 
     .content { width: 1060px; max-width: 90%; margin: 0px auto; }
     @media (max-width: 460px) { .content { max-width: 100%;} }
@@ -216,8 +218,11 @@
 <body>
   <div class="container-fluid">
     <div class="row">
-      <header><img src="./images/headline-bg-compressed.jpg" class="img-responsive hidden-xs fullwidth"><img src="./images/headline-bg-mobile.jpg" class="img-responsive visible-xs"></header>
-
+      <header>
+        <p><span>WARNING:</span> Do Not Share With &ldquo;Non-Cleared&rdquo; Persons</p>
+        <img src="./images/headline-bg-compressed.jpg" class="img-responsive hidden-xs fullwidth">
+        <img src="./images/headline-bg-mobile.jpg" class="img-responsive visible-xs">
+      </header>
       <div class="content">
 		  <h1>Headline        </h1>
 	    <div class="video">
