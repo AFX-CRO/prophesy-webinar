@@ -202,9 +202,9 @@
 }
     @media (max-width: 768px) { h3 { margin-top: 20px; } }
 
-  .footer-copyright,.footer_copyright{margin:2em auto;text-align:left;}
+  .footer-copyright,.footer_copyright{margin:2em auto;text-align:left; max-width: 800px; margin-left: auto; margin-right: auto;}
   .footI{float:left;margin:0 .5em 0 2em}
-  .footP{font-size:14px;line-height:1.4em;margin-top:1em;margin-bottom:7em;color:#323232}
+  .footP{font-size:14px;line-height:1.4em;margin-top:1em;margin-bottom:7em;color:#323232; }
   .privacypolicy{color:#2580b5;text-decoration:underline}
   .privacypolicy:hover{cursor:pointer}
   .fda-footer{max-width:900px;margin:2em auto;text-align:left;padding:1%;border:thin solid #000}
@@ -223,47 +223,64 @@
         <img src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/headline-bg-mobile.jpg" class="img-responsive visible-xs">
       </header>
       <div class="content">
-		  <h1>Headline        </h1>
-	    <div class="video">
-          <img src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/video.jpg" class="img-responsive">
-        </div>
+		  <h1>Broadcasting Now:
+</h1>
+<!--=== Video ===-->
+  <div class="wistia_responsive_wrapper video" style="max-height:360px;max-width:640px; margin:0 auto; margin-bottom: 2em;">
+    <div class="wistia_embed videoFoam=true playbar=false fullscreenButton=false  playButton=true autoPlay=true" style="max-width:640px;max-height:360px;">&nbsp;</div>
+  </div>
+<!--=== / Video ===-->
 
-        <h2>This section should appear X minutes after Video starts playing</h2>
-        <a class="btn btn-main" href="">Add To Order</a>
+<!-- Video Script -->
+  <script>
+    $( document ).ready(function(){
+          // add video id below
+          var videoId = 'hynj0fuawe';
+
+
+          var vidClass = 'wistia_async_' + videoId;
+          $(".wistia_embed").addClass(vidClass);
+          window._wq = window._wq || [];
+
+          _wq.push({ id: videoId , onReady: function(video) {
+
+            var video = Wistia.api(videoId);
+            var hidden =   true;
+
+
+            video.bind("crosstime", 50, function() {
+                    $('.unhide').css('display', 'block');
+                    $('.unhide').trigger('lytics_event');
+                    hidden = false;
+                    return;
+              });
+
+              video.bind("end", function() {
+                if (hidden == true){
+                  $('.unhide').css('display', 'block');
+                  $('.unhide').trigger('lytics_event');
+                  hidden = false;
+                  return;
+                };
+              });
+
+            }
+
+          });
+      });
+    </script>
+<!--=== /Video Script ==-->
+
+  <div class="unhide">
+    <center><a class="btn btn-main subnow pop" href="">Add To Order</a></center>
+  </div>
+
         <p>&nbsp;</p>
         <!-- Entry Ends Here -->
-      </div>>
+      </div>
 
     <!-- Content --></div>
   </div>
 
-  <script>
-    const siemas = document.querySelectorAll('.testimonials');
-
-    // Extend prototype with method that adds arrows to DOM
-    // Style the arrows with CSS or JS — up to you mate
-    Siema.prototype.addArrows = function() {
-
-      // make buttons & append them inside Siema's container
-      this.prevArrow = document.createElement('button');
-      this.nextArrow = document.createElement('button');
-      this.prevArrow.textContent = '<<';
-      this.nextArrow.textContent = '>>';
-      this.selector.appendChild(this.prevArrow)
-      this.selector.appendChild(this.nextArrow)
-
-      // event handlers on buttons
-      this.prevArrow.addEventListener('click', () => this.prev());
-      this.nextArrow.addEventListener('click', () => this.next());
-    }
-
-    for(const siema of siemas) {
-      const instance = new Siema({
-        selector: siema,
-        perPage: 3
-      });
-      instance.addArrows();
-    }
-  </script>
 </body>
 </html>
