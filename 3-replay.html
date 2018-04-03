@@ -46,6 +46,10 @@
     </script>
   <!--===== /Exitpop Script =====-->
 
+  <!-- Deadline Funnel -->
+  <script type="text/javascript" data-cfasync="false">function base64_encode(e){var r,t,c,a,h,n,o,A,i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",d=0,l=0,s="",u=[];if(!e)return e;do r=e.charCodeAt(d++),t=e.charCodeAt(d++),c=e.charCodeAt(d++),A=r<<16|t<<8|c,a=A>>18&63,h=A>>12&63,n=A>>6&63,o=63&A,u[l++]=i.charAt(a)+i.charAt(h)+i.charAt(n)+i.charAt(o);while(d<e.length);s=u.join("");var C=e.length%3;var decoded = (C?s.slice(0,C-3):s)+"===".slice(C||3);decoded = decoded.replace("+", "-");decoded = decoded.replace("/", "_");return decoded;} var url = base64_encode(location.href);var parentUrl = (parent !== window) ? ("/" + base64_encode(document.referrer)) : "";(function() {var s = document.createElement("script");s.type = "text/javascript";s.async = true;s.setAttribute("data-scriptid", "dfunifiedcode");s.src ="https://deadlinefunnel.com/runified/eyJpdiI6ImhMVWhFSXEwZ3JxYTlwTHB0ZVZObEE9PSIsInZhbHVlIjoiWlRrK3hqaFVhUTgwbXFrZXRibGl5QT09IiwibWFjIjoiMDYzOGYwMzczNjg1YjAwM2UyMGUzNTc0OWM5NDljNDI5YTE5YjU0NmUyMmU2ZGI5ODFmYzRmZmMyZGNhYTEwYyJ9/"+url+parentUrl;var s2 = document.getElementsByTagName("script")[0];s2.parentNode.insertBefore(s, s2);})();</script>
+  <!-- End Deadline Funnel -->
+
   <!--=====  SCRIPT ====-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/siema@1.4.14/dist/siema.min.js"></script>
@@ -216,71 +220,67 @@
 
 <body>
   <div class="container-fluid">
-    <div class="row">
-      <header>
-        <p><span>WARNING:</span> Do Not Share With &ldquo;Non-Cleared&rdquo; Persons</p>
-        <img src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/headline-bg-compressed.jpg" class="img-responsive hidden-xs fullwidth">
-        <img src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/headline-bg-mobile.jpg" class="img-responsive visible-xs">
-      </header>
-      <div class="content">
-		  <h1>REPLAY COMES DOWN IN: [COUNTDOWN TIMER]
-</h1>
-<!--=== Video ===-->
+  <div class="row">
+  <header>
+  <p><span>WARNING:</span> Do Not Share With &ldquo;Non-Cleared&rdquo; Persons</p>
+  <img class="img-responsive hidden-xs fullwidth" src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/headline-bg-compressed.jpg" /> <img class="img-responsive visible-xs" src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/headline-bg-mobile.jpg" /></header>
+
+  <div class="content">
+  <h1>REPLAY COMES DOWN IN:</h1>
+  <div class="ddio_countdown_wrap"></div>
+
+  <!--=== Video ===-->
+
   <div class="wistia_responsive_wrapper video" style="max-height:360px;max-width:640px; margin:0 auto; margin-bottom: 2em;">
-    <div class="wistia_embed videoFoam=true playbar=false fullscreenButton=false  playButton=true autoPlay=true" style="max-width:640px;max-height:360px;">&nbsp;</div>
+  <div class="wistia_embed videoFoam=true playbar=false fullscreenButton=false  playButton=true autoPlay=true" style="max-width:640px;max-height:360px;">&nbsp;</div>
   </div>
-<!--=== / Video ===-->
-
-<!-- Video Script -->
-  <script>
-    $( document ).ready(function(){
-          // add video id below
-          var videoId = 'hynj0fuawe';
+  <!--=== / Video ===--><!-- Video Script --><script>
+      $( document ).ready(function(){
+            // add video id below
+            var videoId = 'hynj0fuawe';
 
 
-          var vidClass = 'wistia_async_' + videoId;
-          $(".wistia_embed").addClass(vidClass);
-          window._wq = window._wq || [];
+            var vidClass = 'wistia_async_' + videoId;
+            $(".wistia_embed").addClass(vidClass);
+            window._wq = window._wq || [];
 
-          _wq.push({ id: videoId , onReady: function(video) {
+            _wq.push({ id: videoId , onReady: function(video) {
 
-            var video = Wistia.api(videoId);
-            var hidden =   true;
+              var video = Wistia.api(videoId);
+              var hidden =   true;
 
 
-            video.bind("crosstime", 50, function() {
+              video.bind("crosstime", 50, function() {
+                      $('.unhide').css('display', 'block');
+                      $('.unhide').trigger('lytics_event');
+                      hidden = false;
+                      return;
+                });
+
+                video.bind("end", function() {
+                  if (hidden == true){
                     $('.unhide').css('display', 'block');
                     $('.unhide').trigger('lytics_event');
                     hidden = false;
                     return;
-              });
+                  };
+                });
 
-              video.bind("end", function() {
-                if (hidden == true){
-                  $('.unhide').css('display', 'block');
-                  $('.unhide').trigger('lytics_event');
-                  hidden = false;
-                  return;
-                };
-              });
+              }
 
-            }
-
-          });
-      });
-    </script>
-<!--=== /Video Script ==-->
+            });
+        });
+      </script><!--=== /Video Script ==-->
 
   <div class="unhide">
-    <center><a class="btn btn-main subnow pop" href="">Add To Order</a></center>
+  <center><a class="btn btn-main subnow pop" href="">Add To Order</a></center>
   </div>
 
-        <p>&nbsp;</p>
-        <!-- Entry Ends Here -->
-      </div>
-
-    <!-- Content --></div>
+  <p>&nbsp;</p>
+  <!-- Entry Ends Here --></div>
+  <!-- Content --></div>
   </div>
+
 
 </body>
 </html>
