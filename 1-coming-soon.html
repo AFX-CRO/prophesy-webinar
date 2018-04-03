@@ -1,301 +1,308 @@
 
 <html>
 <head>
-  <meta charset="utf-8" /> <!-- for working locally -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Coming Soon</title>
+    <meta charset="utf-8" /> <!-- for working locally -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!--=====|||||     Scripts to Remove on Iris  |||||=====-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-  <!--=====|||||     Scripts to Remove on Iris  |||||=====-->
+      <title>Coming Soon</title>
 
-
-   <!--=====|||||     Scripts to Stay  |||||=====-->
-    <script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/promo_function.js"></script>
-  <!--=====|||||     Scripts to Stay  |||||======-->
+    <!--=====|||||     Scripts to Remove on Iris  |||||=====-->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+    <!--=====|||||     Scripts to Remove on Iris  |||||=====-->
 
 
+     <!--=====|||||     Scripts to Stay  |||||=====-->
+      <script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/promo_function.js"></script>
+    <!--=====|||||     Scripts to Stay  |||||======-->
+
+
+      <!--===== /Exitpop Script =====-->
+      <script>
+        setTimeout(function(){
+          function addEvent(obj, evt, fn) {
+             if (obj.addEventListener) {
+                 obj.addEventListener(evt, fn, false);
+             }
+             else if (obj.attachEvent) {
+                 obj.attachEvent("on" + evt, fn);
+             }
+          }
+          addEvent(document, "mouseout", function(e) {
+             e = e ? e : window.event;
+             var from = e.relatedTarget || e.toElement;
+             if (!from || from.nodeName == "HTML") {
+                $('#popmessage').show();
+                $('#popmessage').trigger('lytics_event');
+                $('#popmessage').children().show();
+              }
+          });
+          $('#exitButton,#watch_video').click(function(){
+            $('#popmessage').hide();
+            $('#popmessage').children().hide();
+            $('#popmessage').remove();
+          });
+       }, 60000);
+      </script>
     <!--===== /Exitpop Script =====-->
-    <script>
-      setTimeout(function(){
-        function addEvent(obj, evt, fn) {
-           if (obj.addEventListener) {
-               obj.addEventListener(evt, fn, false);
-           }
-           else if (obj.attachEvent) {
-               obj.attachEvent("on" + evt, fn);
-           }
-        }
-        addEvent(document, "mouseout", function(e) {
-           e = e ? e : window.event;
-           var from = e.relatedTarget || e.toElement;
-           if (!from || from.nodeName == "HTML") {
-              $('#popmessage').show();
-              $('#popmessage').trigger('lytics_event');
-              $('#popmessage').children().show();
-            }
-        });
-        $('#exitButton,#watch_video').click(function(){
-          $('#popmessage').hide();
-          $('#popmessage').children().hide();
-          $('#popmessage').remove();
-        });
-     }, 60000);
-    </script>
-  <!--===== /Exitpop Script =====-->
 
-  <!--=====  SCRIPT ====-->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/siema@1.4.14/dist/siema.min.js"></script>
-  <!--=====  / SCRIPT ====-->
-  <!--=====  CSS ====-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!--=====  / CSS ====-->
-  <!--=====  Fonts ====-->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
-  <!--=====  / Fonts ====-->
-  <style>
+    <!--=====  SCRIPT ====-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/siema@1.4.14/dist/siema.min.js"></script>
+    <!--=====  / SCRIPT ====-->
+    <!--=====  CSS ====-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--=====  / CSS ====-->
+    <!--=====  Fonts ====-->
+      <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet">
+    <!--=====  / Fonts ====-->
+    <style>
 
-    @media (max-width: 768px) {
-      html {font-size: 100%; }
-    }
-    body { font-family: 'Raleway', sans-serif; }
+      @media (max-width: 768px) {
+        html {font-size: 100%; }
+      }
+      body { font-family: 'Raleway', sans-serif; }
 
-    h1 { font-family: 'Raleway', sans-serif; font-size: 50px; font-weight: 700; color: #004a8b; text-align: center; }
-    @media (max-width: 768px) { h1 { font-size: 22px; } }
+      h1 { font-family: 'Raleway', sans-serif; font-size: 50px; font-weight: 700; color: #004a8b; text-align: center; }
+      @media (max-width: 768px) { h1 { font-size: 22px; } }
 
-    h2 { font-family: 'Raleway', sans-serif; font-size: 44px; font-weight: 900; color: #004a8b; text-align: center; padding: 20px 0; clear: both; }
-    @media (max-width: 768px) { h2 { padding: 0; margin-top: -20px; } }
+      h2 { font-family: 'Raleway', sans-serif; font-size: 44px; font-weight: 900; color: #004a8b; text-align: center; padding: 20px 0; clear: both; }
+      @media (max-width: 768px) { h2 { padding: 0; margin-top: -20px; } }
 
-    h3 { font-family: 'Raleway', sans-serif; font-size: 26px; font-weight: 700; color: #004a8b; margin-top: 0; }
-    @media (max-width: 768px) { h3 { margin-top: 20px; } }
+      h3 { font-family: 'Raleway', sans-serif; font-size: 26px; font-weight: 700; color: #004a8b; margin-top: 0; }
+      @media (max-width: 768px) { h3 { margin-top: 20px; } }
 
-    h4 { font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 400; color: #7b99b3; margin-bottom: 25px; }
-    p { font-family: 'Raleway', sans-serif; font-size: 18px; color: #004a8b; }
+      h4 { font-family: 'Raleway', sans-serif; font-size: 18px; font-weight: 400; color: #7b99b3; margin-bottom: 25px; }
+      p { font-family: 'Raleway', sans-serif; font-size: 18px; color: #004a8b; }
 
-    header { border-bottom: 10px solid #02468f; background-color: #060c24; text-align: center; }
-    header img { margin: 0px auto; }
-    header p { font-family: 'Raleway', sans-serif; font-size: 1.5em; letter-spacing: -.5px; margin: 0; color: lightblue; }
-    header p span { color: #f8e71c; }
-    @media (max-width: 768px) { header p { font-size: 22px; } }
-    @media (max-width: 460px) { header p { font-size: 16px; } }
+      header { border-bottom: 10px solid #02468f; background-color: #060c24; text-align: center; }
+      header img { margin: 0px auto; }
+      header p { font-family: 'Raleway', sans-serif; font-size: 1.5em; letter-spacing: -.5px; margin: 0; color: lightblue; }
+      header p span { color: #f8e71c; }
+      @media (max-width: 768px) { header p { font-size: 22px; } }
+      @media (max-width: 460px) { header p { font-size: 16px; } }
 
-    .content { max-width: 800px; margin: 0px auto; }
+      .content { max-width: 800px; margin: 0px auto; }
 
-    .video { max-width: 85%; margin: 20px auto; border: 5px solid #004a8b; position: relative; }
+      .video { max-width: 85%; margin: 20px auto; border: 5px solid #004a8b; position: relative; }
 
-    .video:after {
-      content: "";
-      width:0px;
-      height:0px;
-      border-left:20px solid transparent;
-      border-right:20px solid transparent;
-      border-top:10px solid #004a8b;
-      position:absolute;
-      bottom:-15px;
-      left: 50%;
-      margin-left: -12px;
-    }
-    @media (max-width: 1200px) { .video:after { bottom:-13px; } }
+      .video:after {
+        content: "";
+        width:0px;
+        height:0px;
+        border-left:20px solid transparent;
+        border-right:20px solid transparent;
+        border-top:10px solid #004a8b;
+        position:absolute;
+        bottom:-15px;
+        left: 50%;
+        margin-left: -12px;
+      }
+      @media (max-width: 1200px) { .video:after { bottom:-13px; } }
 
-    .btn-main {
-      font-family: 'Raleway', sans-serif;
-      font-size: 21px;
-      font-weight: bold;
-      font-style: italic;
-      color: #fff;
+      .btn-main {
+        font-family: 'Raleway', sans-serif;
+        font-size: 21px;
+        font-weight: bold;
+        font-style: italic;
+        color: #fff;
+        display: block;
+        width: 80%;
+        max-width:380px;
+        margin: 0px auto;
+        background: #ee7700; /* Old browsers */
+        background: -moz-linear-gradient(top, #ee7700 0%, #ea5800 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #ee7700 0%,#ea5800 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #ee7700 0%,#ea5800 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee7700', endColorstr='#ea5800',GradientType=0 ); /* IE6-9 */
+      }
+
+      .btn-main:hover, .btn-read-more:hover { color: #fff; }
+
+      .btn-read-more {
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        background: #004a8b; /* Old browsers */
+        background: -moz-linear-gradient(top, #004a8b 0%, #072847 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #004a8b 0%,#072847 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #004a8b 0%,#072847 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee7700', endColorstr='#ea5800',GradientType=0 ); /* IE6-9 */
+      }
+
+      .testimonials { width: 100%; max-width: 1760px; margin: 20px auto 40px; position: relative;}
+
+      .testimonials button:nth-of-type(1) { position: absolute; left: 0; top: 34%; }
+
+      .testimonials button:nth-of-type(2) { position: absolute; right: 0; top: 34%; }
+
+      .testimonials p{ font-family: 'Raleway', sans-serif; font-size: 22px; color: #004a8b; }
+
+      .testimonials .testimonial { background: url("https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/testimonials-bg.png") no-repeat; background-size: 100% 100%; padding: 20px; margin: 15px;}
+      @media (max-width: 768px) { .testimonials div { width: 95% !important; margin: 0px auto; } }
+
+      .testimonials button { border: 0; border-radius: 3px; background: #004a8b;; color: #fff; opacity: 0.8; }
+      @media (max-width: 768px) { .testimonials button { display: none; } }
+
+      .testimonials .testimonial p{ font-weight: bold; font-style: italic; }
+
+      .testimonials p.author { text-align: right; margin-top: 20px; }
+
+      .entry { margin: 20px auto 35px; }
+
+      .entry-links { width: 1060px; max-width: 90%; margin: 0 auto;  height: 40px; }
+      @media (max-width: 768px) { .entry-links { max-width: 100%; background: #f2f2f2; display: block; padding: 8px 10px; margin: 0 auto;} }
+
+      .entries-link { font-family: 'Raleway', sans-serif; font-size: 18px; color: #004a8b; font-weight: bold; }
+      /*vwo*/ /*vwo*/
+
+
+
+  	  img.image-center, img.image_center {
       display: block;
-      width: 80%;
-      max-width:380px;
-      margin: 0px auto;
-      background: #ee7700; /* Old browsers */
-      background: -moz-linear-gradient(top, #ee7700 0%, #ea5800 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, #ee7700 0%,#ea5800 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, #ee7700 0%,#ea5800 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee7700', endColorstr='#ea5800',GradientType=0 ); /* IE6-9 */
-    }
+      text-align: center;
+      margin: 0 auto;
+  }
 
-    .btn-main:hover, .btn-read-more:hover { color: #fff; }
+  	  img {
+      max-width: 100%;
+      height: auto;
+      -ms-interpolation-mode: bicubic;
+      display: inline-block;
+      vertical-align: middle;
+  }
 
-    .btn-read-more {
-      color: #fff;
-      font-size: 30px;
-      font-weight: bold;
-      background: #004a8b; /* Old browsers */
-      background: -moz-linear-gradient(top, #004a8b 0%, #072847 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, #004a8b 0%,#072847 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, #004a8b 0%,#072847 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ee7700', endColorstr='#ea5800',GradientType=0 ); /* IE6-9 */
-    }
+  	   p {
+  	font-family: 'Raleway', sans-serif;
+  	font-size: 1.4em;
+  	color: #2E2E2E;
+  	margin: .9375em 2.8em;
+  }
 
-    .testimonials { width: 100%; max-width: 1760px; margin: 20px auto 40px; position: relative;}
+  	  ol, ul {
+      font-size: 1.4rem;
+      margin: 1.25em 6.25em 1.25em 5em;
+  }
+  	  li {
+      line-height: 1.7em;
+      margin-top: 1.25em;
+  	display: list-item;
+  	text-align: -webkit-match-parent;
+  	font-size: 1.4em;
+  }
+  @media (max-width: 768px) {
+    li {
+      display: list-item;
+      text-align: -webkit-match-parent;
+      font-size: 1.2rem;
+      line-height: 100%;
+      margin-top: 1.25rem;
+  }
+  }
+  	  ul.checkmark, ul.ulcheckmark {
+      list-style-image: url(https://d13p2xj50zkyqm.cloudfront.net/scripts/assets/checkmark.png);
+  }
 
-    .testimonials button:nth-of-type(1) { position: absolute; left: 0; top: 34%; }
+  	  h3 {
+  	font-family: 'Raleway', sans-serif;
+  	font-size: 26px;
+  	font-weight: 700;
+  	color: #004a8b;
+  	margin: 1em 2.8em;
+  	text-align: center;
+  }
+  @media (max-width: 768px) { h3 { margin-top: 20px; } }
 
-    .testimonials button:nth-of-type(2) { position: absolute; right: 0; top: 34%; }
+  .footer-copyright,.footer_copyright{margin:2em auto;text-align:left; max-width: 800px; margin-left: auto; margin-right: auto;}
+  .footI{float:left;margin:0 .5em 0 2em}
+  .footP{font-size:14px;line-height:1.4em;margin-top:1em;margin-bottom:7em;color:#323232; }
+  .privacypolicy{color:#2580b5;text-decoration:underline}
+  .privacypolicy:hover{cursor:pointer}
+  .fda-footer{max-width:900px;margin:2em auto;text-align:left;padding:1%;border:thin solid #000}
+  .clickPop{font-size:1.5rem;width:60%;margin:1em auto;padding:.5em 1.5em;background-color:orange;color:#333;border:2px solid #000;border-radius:10px;box-shadow:0 4px 0 #b37400;text-align:center;box-shadow:0 1px 0 0 #fff6af;background:linear-gradient(180deg,#ffec64 5%,#ffab23);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64',endColorstr='#ffab23',GradientType=0);background-color:#ffec64;transition:.7s ease-in-out}.clickPop,.clickPop:hover{cursor:pointer}.clickPop:hover{border-color:#888;-webkit-transform:translateY(-10px);-ms-transform:translateY(-10px);transform:translateY(-10px);-moz-transform:translateY(-10px);-o-transform:translateY(-10px);box-shadow:0 5px 4px 0 #999;-webkit-transform:scale(1.02)}.shadowarea{width:100%;height:100%;background:#000;background:rgba(0,0,0,.8);z-index:4;position:fixed;top:0;cursor:pointer;display:none}label{font-size:2rem}input{text-align:left;width:100%;padding:10px;margin:10px;border:medium solid #87cefa;border:medium solid rgba(135,206,250,.8)}input:focus{border:thin solid #edfa87;border:thin solid hsla(67,92%,75%,.8)}.signup{max-width:750px;width:100%;background-color:#fff;position:fixed;margin:5% auto;left:0;right:0;z-index:5;padding:10px 50px 50px;top:10px;cursor:default}.blackbox{background-color:#000;padding:10px;text-align:center;width:55%;font-family:purista-web,verdana,arial,sans-serif;font-style:italic;text-transform:uppercase;letter-spacing:.05em;color:#fff;font-size:1em}.x{position:absolute;right:0;top:0;background:#fff;color:#000;border-radius:50%;border:thin solid #fff;padding:5px;margin-right:-10px;margin-top:-10px;cursor:pointer}.x:hover{background:#000;color:#fff}a.clickPop_2{font-size:2em;text-decoration:none;width:80%;display:block;margin:1em auto;padding:.5em 1.5em;background-color:orange;color:#333;border:2px solid #000;border-radius:10px;box-shadow:0 4px 0 #b37400;text-align:center;box-shadow:0 1px 0 0 #fff6af;background:linear-gradient(180deg,#ffec64 5%,#ffab23);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64',endColorstr='#ffab23',GradientType=0);background-color:#ffec64;transition:.7s ease-in-out}a.clickPop_2,a.clickPop_2:hover{cursor:pointer}a.clickPop_2:hover{border-color:#888;-webkit-transform:translateY(-10px);-ms-transform:translateY(-10px);transform:translateY(-10px);-moz-transform:translateY(-10px);-o-transform:translateY(-10px);box-shadow:0 5px 4px 0 #999;-webkit-transform:scale(1.02)}@media screen and (max-width:695px){div.contentwrapper{max-width:100%;margin-top:0;border:none}h1{font-size:2.6rem}h1,h2{margin:.5em .2em}h2{font-size:1.8rem}h3{font-size:1.6rem;margin:1em .667em}p{font-size:1.125rem}blockquote,ol,ul{margin:20px 16px;margin:1.25rem 1rem}br.hidebr{display:none}.x{margin-right:0;margin-top:0;font-size:2rem}}
+  @media screen and (max-height:970px){.shadowarea h3{font-size:1.6rem}}@media screen and (max-height:600px){img.shadowarea{display:none}}
 
-    .testimonials p{ font-family: 'Raleway', sans-serif; font-size: 22px; color: #004a8b; }
-
-    .testimonials .testimonial { background: url("https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/testimonials-bg.png") no-repeat; background-size: 100% 100%; padding: 20px; margin: 15px;}
-    @media (max-width: 768px) { .testimonials div { width: 95% !important; margin: 0px auto; } }
-
-    .testimonials button { border: 0; border-radius: 3px; background: #004a8b;; color: #fff; opacity: 0.8; }
-    @media (max-width: 768px) { .testimonials button { display: none; } }
-
-    .testimonials .testimonial p{ font-weight: bold; font-style: italic; }
-
-    .testimonials p.author { text-align: right; margin-top: 20px; }
-
-    .entry { margin: 20px auto 35px; }
-
-    .entry-links { width: 1060px; max-width: 90%; margin: 0 auto;  height: 40px; }
-    @media (max-width: 768px) { .entry-links { max-width: 100%; background: #f2f2f2; display: block; padding: 8px 10px; margin: 0 auto;} }
-
-    .entries-link { font-family: 'Raleway', sans-serif; font-size: 18px; color: #004a8b; font-weight: bold; }
-    /*vwo*/ /*vwo*/
-
-
-
-	  img.image-center, img.image_center {
-    display: block;
-    text-align: center;
-    margin: 0 auto;
-}
-
-	  img {
-    max-width: 100%;
-    height: auto;
-    -ms-interpolation-mode: bicubic;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-	   p {
-	font-family: 'Raleway', sans-serif;
-	font-size: 1.4em;
-	color: #2E2E2E;
-	margin: .9375em 2.8em;
-}
-
-	  ol, ul {
-    font-size: 1.4rem;
-    margin: 1.25em 6.25em 1.25em 5em;
-}
-	  li {
-    line-height: 1.7em;
-    margin-top: 1.25em;
-	display: list-item;
-	text-align: -webkit-match-parent;
-	font-size: 1.4em;
-}
-@media (max-width: 768px) {
-  li {
-    display: list-item;
-    text-align: -webkit-match-parent;
-    font-size: 1.2rem;
-    line-height: 100%;
-    margin-top: 1.25rem;
-}
-}
-	  ul.checkmark, ul.ulcheckmark {
-    list-style-image: url(https://d13p2xj50zkyqm.cloudfront.net/scripts/assets/checkmark.png);
-}
-
-	  h3 {
-	font-family: 'Raleway', sans-serif;
-	font-size: 26px;
-	font-weight: 700;
-	color: #004a8b;
-	margin: 1em 2.8em;
-	text-align: center;
-}
-@media (max-width: 768px) { h3 { margin-top: 20px; } }
-
-.footer-copyright,.footer_copyright{margin:2em auto;text-align:left;}
-.footI{float:left;margin:0 .5em 0 2em}
-.footP{font-size:14px;line-height:1.4em;margin-top:1em;margin-bottom:7em;color:#323232}
-.privacypolicy{color:#2580b5;text-decoration:underline}
-.privacypolicy:hover{cursor:pointer}
-.fda-footer{max-width:900px;margin:2em auto;text-align:left;padding:1%;border:thin solid #000}
-.clickPop{font-size:1.5rem;width:60%;margin:1em auto;padding:.5em 1.5em;background-color:orange;color:#333;border:2px solid #000;border-radius:10px;box-shadow:0 4px 0 #b37400;text-align:center;box-shadow:0 1px 0 0 #fff6af;background:linear-gradient(180deg,#ffec64 5%,#ffab23);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64',endColorstr='#ffab23',GradientType=0);background-color:#ffec64;transition:.7s ease-in-out}.clickPop,.clickPop:hover{cursor:pointer}.clickPop:hover{border-color:#888;-webkit-transform:translateY(-10px);-ms-transform:translateY(-10px);transform:translateY(-10px);-moz-transform:translateY(-10px);-o-transform:translateY(-10px);box-shadow:0 5px 4px 0 #999;-webkit-transform:scale(1.02)}.shadowarea{width:100%;height:100%;background:#000;background:rgba(0,0,0,.8);z-index:4;position:fixed;top:0;cursor:pointer;display:none}label{font-size:2rem}input{text-align:left;width:100%;padding:10px;margin:10px;border:medium solid #87cefa;border:medium solid rgba(135,206,250,.8)}input:focus{border:thin solid #edfa87;border:thin solid hsla(67,92%,75%,.8)}.signup{max-width:750px;width:100%;background-color:#fff;position:fixed;margin:5% auto;left:0;right:0;z-index:5;padding:10px 50px 50px;top:10px;cursor:default}.blackbox{background-color:#000;padding:10px;text-align:center;width:55%;font-family:purista-web,verdana,arial,sans-serif;font-style:italic;text-transform:uppercase;letter-spacing:.05em;color:#fff;font-size:1em}.x{position:absolute;right:0;top:0;background:#fff;color:#000;border-radius:50%;border:thin solid #fff;padding:5px;margin-right:-10px;margin-top:-10px;cursor:pointer}.x:hover{background:#000;color:#fff}a.clickPop_2{font-size:2em;text-decoration:none;width:80%;display:block;margin:1em auto;padding:.5em 1.5em;background-color:orange;color:#333;border:2px solid #000;border-radius:10px;box-shadow:0 4px 0 #b37400;text-align:center;box-shadow:0 1px 0 0 #fff6af;background:linear-gradient(180deg,#ffec64 5%,#ffab23);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64',endColorstr='#ffab23',GradientType=0);background-color:#ffec64;transition:.7s ease-in-out}a.clickPop_2,a.clickPop_2:hover{cursor:pointer}a.clickPop_2:hover{border-color:#888;-webkit-transform:translateY(-10px);-ms-transform:translateY(-10px);transform:translateY(-10px);-moz-transform:translateY(-10px);-o-transform:translateY(-10px);box-shadow:0 5px 4px 0 #999;-webkit-transform:scale(1.02)}@media screen and (max-width:695px){div.contentwrapper{max-width:100%;margin-top:0;border:none}h1{font-size:2.6rem}h1,h2{margin:.5em .2em}h2{font-size:1.8rem}h3{font-size:1.6rem;margin:1em .667em}p{font-size:1.125rem}blockquote,ol,ul{margin:20px 16px;margin:1.25rem 1rem}br.hidebr{display:none}.x{margin-right:0;margin-top:0;font-size:2rem}}
-@media screen and (max-height:970px){.shadowarea h3{font-size:1.6rem}}@media screen and (max-height:600px){img.shadowarea{display:none}}
-
-  </style>
+    </style>
 </head>
 
 <body>
   <div class="container-fluid">
-    <div class="row">
-      <header>
-        <p><span>WARNING:</span> Do Not Share With &ldquo;Non-Cleared&rdquo; Persons</p>
-        <img src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/headline-bg-compressed.jpg" class="img-responsive hidden-xs fullwidth">
-        <img src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/headline-bg-mobile.jpg" class="img-responsive visible-xs">
-      </header>
+  <div class="row">
+  <header>
+  <p><span>WARNING:</span> Do Not Share With &ldquo;Non-Cleared&rdquo; Persons</p>
+  <img class="img-responsive hidden-xs fullwidth" src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/headline-bg-compressed.jpg" /> <img class="img-responsive visible-xs" src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/headline-bg-mobile.jpg" /></header>
 
-      <div class="content">
-		  <h1>Special Broadcast with Jim Rickards Starts In:</h1>
-	    <h3>Deadline Funnel Countdown Timer Goes here</h3>
-        <img class="image-center" style="padding-bottom:20px;" src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/OptInPage/RIT_ProjectProphesy_OptinPage_Vid_0318_001.jpg" alt"Broadcast only available for a very short time">
+  <div class="content">
+  <h3>Special Broadcast with Jim Rickards Starts In:</h3>
 
-        <h2>What if you could get ahead of surprising political and economic events that trigger big market moves…BEFORE they are made public…  </h2>
-        <h3>And walk away with an average of $15,760… every two weeks?        </h3>
-        <p><strong>I’m talking about getting ahead of… </strong></p>
-        <ul>
-          <li>A major announcement from the Fed… </li>
-          <li>Surprise government policy changes… </li>
-          <li>Release of important economic data… </li>
-          <li>And other UNEXPECTED news that might trigger a ONE-DAY explosion in the stock… </li>
-        </ul>
-        <h3>On this broadcast I'll &quot;unoficially declassify&quot; a 15 year secret project and reveal the inner workings of a powerful tool I developed while working with the CIA… </h3>
-        <p>A tool that can tip you off about surprising political and economic events BEFORE they happen… </p>
-        <p>Giving you the chance to get ahead of BIG market moves… </p>
-        <p><strong>And walk away with an average of $15,760… every two weeks.</strong>        </p>
-        <p>Don't miss this broadcast, I can only keep it up for a very short window of time.</p>
-        <h3>Broadcast starts in:</h3>
-        <h3>&lt;countdown timer&gt;</h3>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <!-- Entry Ends Here -->
-      </div>
+  <h3>Deadline Funnel Countdown Timer Goes here</h3>
+  <img a="" available="" broadcast="" class="image-center" for="" only="" short="" src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/RIT/projectprophesy-evergreen/OptInPage/RIT_ProjectProphesy_OptinPage_Vid_0318_001.jpg" style="padding-bottom:20px;" very="" />
+  <h2>What if you could get ahead of surprising political and economic events that trigger big market moves&hellip;BEFORE they are made public&hellip;</h2>
 
-    <div class="footer_copyright">
-      <img class="footI" src="https://d13p2xj50zkyqm.cloudfront.net/promos/AF/af_assets/AF_logo_transparent_darktext.png" alt="Agora Financial.com" width="35" height="54"><p class="footP">© Agora Financial, LLC | 808 St. Paul St., Baltimore, MD 21202 | <span id="privacypolicy"><a class="privacypolicy" onclick="window.open('https://agorafinancial.com/privacy-policy/', 'mywin','width=1000,height=800')" ,="">Privacy Policy</a> | <a class="privacypolicy" onclick="window.open('https://agorafinancial.com/terms-and-conditions', 'mywin','width=1000,height=800')" ,="">Terms and Conditions</a></span><br>No part of this report may be reproduced or placed on any electronic medium without written permission from the publisher. Information contained herein is obtained from sources believed to be reliable, but its accuracy cannot be guaranteed.</p>
-    </div>
+  <h2>And walk away with an average of $15,760&hellip; every two weeks?</h2>
 
-    <!-- Content --></div>
+  <p><strong>I&rsquo;m talking about getting ahead of&hellip; </strong></p>
+
+  <ul>
+  	<li>A major announcement from the Fed&hellip;</li>
+  	<li>Surprise government policy changes&hellip;</li>
+  	<li>Release of important economic data&hellip;</li>
+  	<li>And other UNEXPECTED news that might trigger a ONE-DAY explosion in the stock&hellip;</li>
+  </ul>
+
+  <h3>On this broadcast I&#39;ll &quot;unoficially declassify&quot; a 15 year secret project and reveal the inner workings of a powerful tool I developed while working with the CIA&hellip;</h3>
+
+  <p>A tool that can tip you off about surprising political and economic events BEFORE they happen&hellip;</p>
+
+  <p>Giving you the chance to get ahead of BIG market moves&hellip;</p>
+
+  <p><strong>And walk away with an average of <span style="color:#ff0000;">$15,760&hellip; every two weeks.</span></strong></p>
+
+  <p>Don&#39;t miss this broadcast, I can only keep it up for a very short window of time.</p>
+
+  <h3>Broadcast starts in:</h3>
+
+  <h3>&lt;countdown timer&gt;</h3>
+
+  <p>&nbsp;</p>
+
+  <p>&nbsp;</p>
+
+  <p>&nbsp;</p>
+
+  <p>&nbsp;</p>
+  <!-- Entry Ends Here --></div>
+
+  <!-- Content --></div>
   </div>
-
   <script>
-    const siemas = document.querySelectorAll('.testimonials');
+      const siemas = document.querySelectorAll('.testimonials');
 
-    // Extend prototype with method that adds arrows to DOM
-    // Style the arrows with CSS or JS — up to you mate
-    Siema.prototype.addArrows = function() {
+      // Extend prototype with method that adds arrows to DOM
+      // Style the arrows with CSS or JS — up to you mate
+      Siema.prototype.addArrows = function() {
 
-      // make buttons & append them inside Siema's container
-      this.prevArrow = document.createElement('button');
-      this.nextArrow = document.createElement('button');
-      this.prevArrow.textContent = '<<';
-      this.nextArrow.textContent = '>>';
-      this.selector.appendChild(this.prevArrow)
-      this.selector.appendChild(this.nextArrow)
+        // make buttons & append them inside Siema's container
+        this.prevArrow = document.createElement('button');
+        this.nextArrow = document.createElement('button');
+        this.prevArrow.textContent = '<<';
+        this.nextArrow.textContent = '>>';
+        this.selector.appendChild(this.prevArrow)
+        this.selector.appendChild(this.nextArrow)
 
-      // event handlers on buttons
-      this.prevArrow.addEventListener('click', () => this.prev());
-      this.nextArrow.addEventListener('click', () => this.next());
-    }
+        // event handlers on buttons
+        this.prevArrow.addEventListener('click', () => this.prev());
+        this.nextArrow.addEventListener('click', () => this.next());
+      }
 
-    for(const siema of siemas) {
-      const instance = new Siema({
-        selector: siema,
-        perPage: 3
-      });
-      instance.addArrows();
-    }
-  </script>
+      for(const siema of siemas) {
+        const instance = new Siema({
+          selector: siema,
+          perPage: 3
+        });
+        instance.addArrows();
+      }
+    </script>
 </body>
 </html>
