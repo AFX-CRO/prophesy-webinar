@@ -6,11 +6,6 @@
 
     <title>Replay: Project Prophesy</title>
 
-  <!--=====|||||     Scripts to Remove on Iris  |||||=====-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-  <!--=====|||||     Scripts to Remove on Iris  |||||=====-->
-
 
    <!--=====|||||     Scripts to Stay  |||||=====-->
     <script src="https://d13p2xj50zkyqm.cloudfront.net/scripts/promo_function.js"></script>
@@ -231,48 +226,32 @@
   <div class="content">
   <h1>REPLAY COMES DOWN IN:</h1>
   <div class="ddio_countdown_wrap"></div>
-
   <!--=== Video ===-->
 
-  <div class="wistia_responsive_wrapper video" style="max-height:360px;max-width:640px; margin:0 auto; margin-bottom: 2em;">
+  <div class="wistia_responsive_wrapper" style="max-height:365px;max-width:640px; margin:0 auto; margin-bottom: 2em; border: 5px solid #004a8b; border-bottom:10px solid #004a8b;">
   <div class="wistia_embed videoFoam=true playbar=false fullscreenButton=false  playButton=true autoPlay=true" style="max-width:640px;max-height:360px;">&nbsp;</div>
   </div>
   <!--=== / Video ===--><!-- Video Script --><script>
-      $( document ).ready(function(){
-            // add video id below
-            var videoId = 'hynj0fuawe';
 
+      $(window).load(function(){
+              // add video id below
+              var videoId = 'hynj0fuawe';
 
-            var vidClass = 'wistia_async_' + videoId;
-            $(".wistia_embed").addClass(vidClass);
+              var vidClass = 'wistia_async_' + videoId;
+              $(".wistia_embed").addClass(vidClass);
             window._wq = window._wq || [];
 
             _wq.push({ id: videoId , onReady: function(video) {
 
               var video = Wistia.api(videoId);
-              var hidden =   true;
-
-
-              video.bind("crosstime", 50, function() {
+                video.bind("crosstime", 50, function() {
                       $('.unhide').css('display', 'block');
                       $('.unhide').trigger('lytics_event');
-                      hidden = false;
-                      return;
-                });
-
-                video.bind("end", function() {
-                  if (hidden == true){
-                    $('.unhide').css('display', 'block');
-                    $('.unhide').trigger('lytics_event');
-                    hidden = false;
-                    return;
-                  };
-                });
-
+                })
               }
-
             });
-        });
+          });
+
       </script><!--=== /Video Script ==-->
 
   <div class="unhide">
